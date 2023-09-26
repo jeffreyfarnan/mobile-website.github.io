@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>View Source</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" content-type:text/html; charset=utf-8 />
+
+	<link rel="stylesheet" href="_/css/green.css" />
+	<link rel="stylesheet" href="_/css/green.min.css" />
+	<link rel="stylesheet" href="_/css/structure.css" />
+	<link rel="stylesheet" href="_/css/mystyles.css" />
+	<link rel="stylesheet" href="_/css/style-restore.css" />
+	<link rel="stylesheet" href="_/css/style-contact.css" />
+
+	<script src="_/js/jquery.mobile.js"></script>
+
+	<script src="_/js/myscript.js"></script>
+
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKGiw_VJWARuR2m84oFmnC2YT6clz8Qv8&sensor=false"></script>
+
+ <script type="text/javascript" src="salesFolder/js/jquery-1.3.2.js"></script>
+<script src="salesFolder/js/dictionary.js" type="text/javascript"></script>
+
+	<script src="contactFolder/js/jquery.js"></script>
+	<script src="contactFolder/js/effects.js"></script>
+
+	<script src="contactFolder/js/AutoPDFIcons.js"></script>
+
+
+<link rel="stylesheet" href="contactFolder/css/styles.css" />
+
+
+    <script type="text/javascript">
+        $(function() {
+            // create the image rotator and rotate every 2 seconds
+            setInterval("rotateImages()", 2000);
+        });
+
+        function rotateImages() {
+        // get the current photo, ie within photoshow the current div
+            var oCurPhoto = $("#photoShow div.current");
+        // get the next sibling to div.current, ie leaf
+            var oNxtPhoto = oCurPhoto.next();
+
+        // if there is no next photo, ie at 4th photo put nextPhoto = 1st photo in div
+            if (oNxtPhoto.length == 0)
+                oNxtPhoto = $("#photoShow div:first");
+
+        // remove the current photo and add the previous photo
+            oCurPhoto.removeClass('current').addClass('previous');
+
+        // set the css start of with opacity 0 so invisible, put it on top  and animate it up to visible
+        // over a second
+        		oNxtPhoto.css({ opacity: 0.0 }).addClass('current').animate({ opacity: 1.0 }, 1000,
+                function() {
+                // remove currents photo previous class
+                    oCurPhoto.removeClass('previous');
+                });
+        }
+    </script>
+
+</head>
+<body onload="initialize()">
+	<!-- Page: home -->
+	<div id="home"
+		data-role="page"
+		data-theme="a"
+		data-title="View Source: Home">
+
+		<div data-role="content">
+			<img src="images/viewsourcelogo.png" alt="View Source Logo" />
+		</div>
+		<div data-role="controlgroup">
+			<a href="#blog"
+				data-role="button"
+				data-icon="vs_blog"
+			>Blog</a>
+			<a href="#videos"
+				data-role="button"
+				data-icon="vs_video"
+			>Videos</a>
+			<a href="#photos"
+				data-role="button"
+				data-icon="vs_photo"
+			>Photos</a>
+			<a href="#about"
+				data-role="button"
+				data-icon="vs_blog"
+			>About</a>
+		<a href="#cars"
+						data-role="button"
+						data-icon="vs_blog"
+					>Cars</a>
+					<a href="#restore"
+						data-role="button"
+						data-icon="vs_blog"
+					>Restore</a>
+					<a href="#sales"
+						data-role="button"
+						data-icon="vs_blog"
+					>Sales</a>
+					<a href="#contact"
+						data-role="button"
+						data-icon="vs_blog"
+			>Contact</a>
+		</div><!-- links -->
+	</div><!-- page -->
+
+
+
+
+	<!-- Page: cars -->
+		<div id="cars"
+			data-theme="a"
+			data-role="page"
+			data-title="View Source: Blog">
+			<div data-role="header"
+				data-theme="a"
+				data-position="fixed"
+				data-id="vs_header">
+				<h1>Cars</h1>
+				<a href="#home"
+					data-icon="home"
+					data-iconpos="notext"
+					>Home</a>
+				<a href="#info"
+					data-icon="info"
+					data-iconpos="notext"
+					data-rel="dialog"
+					>Info</a>
+			</div><!-- header -->
+			<div data-theme="a"
+				data-role="content"
+				id="postlist">
+			</div>
+
+
+
+			<!-- content -->
+<!-- set up collapsible content and set so all are part of set-->
+			<div data-role="collapsible-set">
+				<div data-role="collapsible">
+					<h3>Pontiac GTO</h3>
+				<img src="images/pontiac.jpg" alt="View Source Logo" align="middle" />
+					<p>The Pontiac GTO is an American automobile built by Pontiac Division of
+					General Motors from 1964 to 1974 and by GM subsidiary Holden in Australia from 2004 to 2006. It was a muscle car classic of the
+					1960s and 1970s. From 1964 until midway through 1973 it was closely related to the Pontiac Tempest/Le Mans and for the 1974 model year
+					it was based on the Pontiac Ventura. The 21st century GTO is essentially a left-hand drive Holden Monaro,
+					itself a coupe variant of the Holden Commodore.</p>
+
+				</div><!-- collapsible -->
+
+				<div data-role="collapsible"
+					data-collapsed="false">
+					<h3>Ford Torino GT</h3>
+				  <img src="images/Ford Torino GT.jpg" alt="View Source Logo" align="middle" />
+					<p>The Ford Torino is an intermediate automobile produced by the Ford Motor Company for the North American market between 1968 and 1976. The car was named after the city of Turin (Torino, in Italian), which is considered the Detroit (primary automobile production city) of Italy. The Torino was initially an upscale version of the intermediate sized Ford Fairlane, which Ford produced between 1962 and 1970. After 1968, the Fairlane name was retained for the base models with lower levels of trim than those models which wore the Torino name. During this time, the Torino was considered a subseries to the Fairlane. By 1970 Torino had become the primary name for Ford's intermediate, and the Fairlane was now a subseries of the Torino. In 1971 the Fairlane name was dropped altogether and all Ford intermediates were called Torino. This name was one of several
+					originally proposed for the Mustang while in development.[1] The Torino was essentially a twin to the Mercury Montego line.</p>
+				</div><!-- collapsible -->
+
+				<div data-role="collapsible">
+					<h3>Buick Gran Sport</h3>
+					<img src="images/Buick Gran Sport.jpg" alt="View Source Logo" align="middle" />
+					<p>The 1965 Skylark Gran Sport was the intermediate Buick Skylark with the Gran Sport option added. Although a 300 cu
+					in (4,916 cc) V8 was already offered in the Skylark, the Gran Sport had the largest engine permitted by GM - a 400 cu in (6,555 cc) Buick V8. This engine was actually 401 cu in (6,570 cc), but called a "400" by Buick because that was the maximum engine size limit set by General Motors for the intermediate body cars. This engine produced 325 hp (242 kW) and 445 lb·ft (603 Nm) and was known as the "nailhead" engine. Buick sold more than 15,000 Skylarks with the Gran Sport option that first year, and almost as many the next. It was renamed the GS 400 in 1967, and the Gran Sport became its own model in (about) that same year along with a new "400" engine quite different from the famously reliable but becoming-obsolete nailhead engine design that was first introduced in 1953. Sales fell somewhat in the face of increasingly higher-performance and more popular muscle cars from other marques when compared to those from the more stodgy and expensive Buick. Buick, however stepped it up a notch when introducing the Stage 1 option in 1969.
+					This limited production (less than 1,500 cars in 1969) version delivered 340 hp (253 kW) and 440 lb·ft (597 Nm).</p>
+				</div><!-- collapsible -->
+
+
+				<div data-role="collapsible">
+					<h3>Dodge Charger Rt</h3>
+				 <img src="images/dodge charger.jpg" alt="View Source Logo" align="middle" />
+					<p>On January 1, 1966, viewers of the Rose Bowl were first introduced to the new "Leader of the Dodge Rebellion", the 1966 Charger. The Charger's debut also followed by a half model year the introduction of a new street version of the 426 cu in (7.0 L) Chrysler Hemi engine. With the Charger, Dodge had a new model to build a performance image to go along with this engine.
+Designed by Carl "CAM" Cameron, the Dodge Charger introduced a fastback roofline and a pot-metal "electric shaver" grille. The grille used fully rotating headlights (180 degree) that when opened or closed made the grille look like one-piece unit. Hidden headlamps were a feature not seen on a Chrysler product since the 1942 DeSoto. In the rear of the new Dodge, the fastback design ended over
+ a full-width six-lamp taillight that featured chromed "CHARGER" lettering.</p>
+
+				</div><!-- collapsible -->
+				<div data-role="collapsible">
+					<h3>Oldsmobile 442</h3>
+					 <img src="images/Oldsmobile 442.jpg" alt="View Source Logo" align="middle" />
+					<p> The Oldsmobile 442 (pronounced four-four-two) was a muscle car produced by the Oldsmobile division of General Motors. It was introduced as an option package for F-85 and Cutlass models sold in the United States beginning with the 1964 model year. The 442 appellation comes from the configuration of the car: a four-barrel carburetor, a four-speed manual transmission, and dual exhaust pipes. It became a model in its own right from 1968 to 1971, then reverted to an option through the mid-1970s. Oldsmobile revived the name in the 1980s on the
+					rear-wheel drive Cutlass Supreme and early 1990s as an option package for the new front-wheel drive Cutlass.</p>
+				</div><!-- collapsible -->
+
+				<div data-role="collapsible">
+					<h3>Plymouth Road Runner</h3>
+					 <img src="images/Plymouth Road Runner.jpg" alt="View Source Logo" align="middle" />
+					<p>The Plymouth Road Runner was a performance car built by the Plymouth division of the Chrysler Corporation in the United States between 1968 and 1980. In 1968, the first muscle cars were, in the opinion of many, moving away from their roots as relatively cheap, fast cars as they gained options. Although Plymouth already had a performance car in the GTX, designers decided to go back to the drawing board and reincarnate the original muscle car concept. Plymouth wanted a car able to run 14-second times in the quarter mile (402 m) and sell for less than US$3000. Both goals were met, and the low-cost muscle car hit the street.
+					The success of the Road Runner would far outpace the upscale and lower volume GTX, with which it was often confused.</p>
+				</div><!-- collapsible -->
+
+
+				<div data-role="collapsible">
+					<h3>Mercury Cyclone</h3>
+					 <img src="images/Mercury Cyclone.jpg" alt="View Source Logo" align="middle" />
+					<p>The Mercury Cyclone is an automobile produced by the Mercury division of the Ford Motor Company from 1964 to 1971. It started as a perfomance model of the 1964 Mercury Comet, and was named the Mercury Comet Cyclone through 1967. In 1968, the "Comet" part of the name was dropped. Options such as GT, Spoiler and Cobra Jet were added and removed.
+					In 1971, it was integrated into the Mercury Montego line as their performance model.</p>
+				</div><!-- collapsible -->
+
+
+				<div data-role="collapsible">
+					<h3>AMC Rebel</h3>
+					 <img src="images/AMC Rebel.jpg" alt="View Source Logo" align="middle" />
+					<p>The AMC Rebel (known as the Rambler Rebel in 1967) is a mid-size car produced by American Motors Corporation (AMC) from 1967 to 1970. It replaced the Rambler Classic. The Rebel was replaced by the similar AMC Matador for the 1971 model year. The Rebel was positioned as the high-volume seller in the independent automaker's line of models. The Rebel was based on AMC's "senior" automobile platform shared with the full-size Ambassador line.
+For the U.S. and Canadian markets, the Rebel was built at AMC's "West Assembly Line" (along with the Ambassador) in Kenosha, Wisconsin and at Brampton, Ontario, Canada (Bramalea - Brampton Assembly Plant).
+The Rebel was also assembled from Complete knock down (CKD) kits under license in Europe (by Renault), in Mexico (by Vehiculos Automotores Mexicanos), in Australia (by Australian Motor Industries) [1] and in New Zealand (Campbell Motor Industries in Thames).
+Rebels continued to be sold in these and other international markets under the "Rambler" brandname.</p>
+				</div><!-- collapsible -->
+
+
+
+		</div><!-- header -->
+
+
+
+
+
+
+
+			<div data-role="footer"
+				data-position="fixed"
+				data-theme="a"
+				data-id="vs_footer">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home"
+						data-role="button"
+						data-icon="home"
+						>Home</a></li>
+						<li><a href="#"
+						data-role="button"
+						data-icon="vs_blog"
+						>Blog</a></li>
+						<li><a href="#videos"
+						data-role="button"
+						data-icon="vs_video"
+						>Videos</a></li>
+						<li><a href="#photos"
+						data-role="button"
+						data-icon="vs_photo"
+						>Photos</a></li>
+						<li><a href="#about"
+						data-role="button"
+						data-icon="vs_blog"
+						>About</a></li>
+					</ul>
+				</div><!-- navbar -->
+			</div><!-- footer -->
+	</div><!-- page -->
+
+
+
+
+<!-- Page: restore -->
+		<div id="restore"
+			data-theme="a"
+			data-role="page"
+			data-title="View Source: Blog">
+			<div data-role="header"
+				data-theme="a"
+				data-position="fixed"
+				data-id="vs_header">
+				<h1>Restore</h1>
+				<a href="#home"
+					data-icon="home"
+					data-iconpos="notext"
+					>Home</a>
+				<a href="#info"
+					data-icon="info"
+					data-iconpos="notext"
+					data-rel="dialog"
+					>Info</a>
+			</div><!-- header -->
+			<div data-theme="a"
+				data-role="content"
+				id="postlist">
+			</div>
+
+
+
+			<!-- content -->
+<div class="img_right"><img src="images/cover.jpg" alt="" /></div>
+<h2>1938 Chevrolet Pepsi Truck Custom Build</h2>
+ <div id="top">
+ <p>This post shows how to accomplish custom metal work with the aid of simple tooling from the scrap bin.
+ This kind of tooling is invaluable when performing automotive restoration, whether going for custom made
+ creations or original body styling.  Not only is the tooling going to be simple to make, its going to be super cheap!
+ The example job is making a pair of defroster/heater vents for the 1938 Chevrolet Pepsi truck dashboard</p>
+</div>
+
+	      <div id="photoShow" >
+	          <div class="current">
+	              <img src="images/restore1.jpg" alt="Photo Gallery" width="380" height="230"  class="gallery" />
+	          </div>
+	          <div>
+	              <img src="images/restore2.jpg" alt="Photo Gallery" width="380" height="230" class="gallery" />
+	          </div>
+	          <div>
+	              <img src="images/restore3.jpg" alt="Photo Gallery" width="380" height="230" class="gallery" />
+	          </div>
+	          <div>
+	              <img src="images/restore4.jpg" alt="Photo Gallery" width="380" height="230"  class="gallery" />
+	          </div>
+    </div>
+
+        <p>We’ve began an exciting custom Chevy truck project for the Pepsi bottling company.  We were commissioned by
+        Newberry Motors GM dealership to undertake the custom metal work and restoration in their home town of Newberry,
+        MI.  After spending 7 weeks there, we completed the first stage of the metal work build.  After discussions and
+        meetings, the owner and Newberry Motors decided to send the truck back with me to my shop in Denver, Colorado.  This is exciting for the Metal Surgeon as our new goal is to complete the whole project and deliver back to Michigan completed and ready for the 4th July Michigan Parade next year</p>
+
+<div class="img_right"><img src="images/small.jpg" alt="" /></div>
+
+
+<p>So, let’s tell you about the 1938 Chevy truck and what we’ll be doing to the truck.  The objective is to have the truck
+drive like a modern vehicle while in keeping the classic looks and style.  On our arrival in Newberry, a freshly built chassis with a new drive train was ready and waiting
+to mount the dismantled cab and components onto.  As mentioned, the overall look of the truck will be kept in line with the original look, but with subtle custom touches.  The planned modifications are as follows:</p>
+
+
+
+
+
+
+	    <blockquote>
+          <p> We’ve began an exciting custom Chevy truck project for the Pepsi bottling company.
+          We were commissioned by Newberry Motors GM dealership to undertake the custom metal work
+          and restoration in their home town of Newberry, MI.  After spending 7 weeks there, we completed
+          the first stage of the metal work build.</p>
+        </blockquote>
+
+
+
+	  <div class="article">
+
+
+<p>
+After building the radiator shell, we decided to build some custom panel work to compliment the classic style of
+the radiator shell.  We stayed with the original 1932 Ford parameters on the hood and sides but opted to create
+some custom scoops.  The scoops create three things:  rigidity in the panel, air flow, and uniqueness, as the
+panels you see below are all one of a kind.
+</p>
+
+</div><p>To help create the scoop work in the panels, we made a hammer form jig.  Each panel was clamped to the jig,
+then the aluminum was jig chased into the depth of the jig, after annealing it (a heat treatment to make the aluminum
+soft and workable).
+<br><br>
+
+
+
+
+
+
+
+			<div data-role="footer"
+				data-position="fixed"
+				data-theme="a"
+				data-id="vs_footer">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home"
+						data-role="button"
+						data-icon="home"
+						>Home</a></li>
+						<li><a href="#"
+						data-role="button"
+						data-icon="vs_blog"
+						>Blog</a></li>
+						<li><a href="#videos"
+						data-role="button"
+						data-icon="vs_video"
+						>Videos</a></li>
+						<li><a href="#photos"
+						data-role="button"
+						data-icon="vs_photo"
+						>Photos</a></li>
+						<li><a href="#about"
+						data-role="button"
+						data-icon="vs_blog"
+						>About</a></li>
+					</ul>
+				</div><!-- navbar -->
+			</div><!-- footer -->
+	</div><!-- page -->
+
+
+	<!-- Page: sales -->
+		<div id="sales"
+			data-theme="a"
+			data-role="page"
+			data-title="View Source: Blog">
+			<div data-role="header"
+				data-theme="a"
+				data-position="fixed"
+				data-id="vs_header">
+				<h1>Sales</h1>
+				<a href="#home"
+					data-icon="home"
+					data-iconpos="notext"
+					>Home</a>
+				<a href="#info"
+					data-icon="info"
+					data-iconpos="notext"
+					data-rel="dialog"
+					>Info</a>
+			</div><!-- header -->
+			<div data-theme="a"
+				data-role="content"
+				id="postlist">
+			</div>
+
+
+
+			<!-- content -->
+
+ <div class="letters" align="center">
+				        <div class="letter" id="letter-a"><a href="#"> <img src="salesFolder/images/carAsmall.jpg" width="200" height="120"   alt="Car A" /></a>
+
+				        <div class="letter" id="letter-b"><a href="#"><img src="salesFolder/images/carBsmall.jpg" width="200" height="120"   alt="Car B" /></a>
+
+
+				        <div class="letter" id="letter-c"><a href="#"> <img src="salesFolder/images/carCsmall.jpg" width="200" height="120"   alt="Car C" /></a>
+			        </div>
+			          </div>
+			            </div>
+
+			 <div id="dictionary">
+      </div>
+
+ </div>
+
+
+
+			<div data-role="footer"
+				data-position="fixed"
+				data-theme="a"
+				data-id="vs_footer">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home"
+						data-role="button"
+						data-icon="home"
+						>Home</a></li>
+						<li><a href="#"
+						data-role="button"
+						data-icon="vs_blog"
+						>Blog</a></li>
+						<li><a href="#videos"
+						data-role="button"
+						data-icon="vs_video"
+						>Videos</a></li>
+						<li><a href="#photos"
+						data-role="button"
+						data-icon="vs_photo"
+						>Photos</a></li>
+						<li><a href="#about"
+						data-role="button"
+						data-icon="vs_blog"
+						>About</a></li>
+					</ul>
+				</div><!-- navbar -->
+			</div><!-- footer -->
+	</div><!-- page -->
+
+
+
+<!-- Page: contact -->
+		<div id="contact"
+			data-theme="a"
+			data-role="page"
+			data-title="View Source: Blog">
+			<div data-role="header"
+				data-theme="a"
+				data-position="fixed"
+				data-id="vs_header">
+				<h1>Contact</h1>
+				<a href="#home"
+					data-icon="home"
+					data-iconpos="notext"
+					>Home</a>
+				<a href="#info"
+					data-icon="info"
+					data-iconpos="notext"
+					data-rel="dialog"
+					>Info</a>
+			</div><!-- header -->
+			<div data-theme="a"
+				data-role="content"
+				id="tweetlist">
+			</div>
+
+
+
+			<!-- content -->
+
+		      <div id="switcher">
+				    <div class="label">Text Size</div>
+				    <button id="switcher-default">Default</button>
+				    <button id="switcher-large">Bigger</button>
+				    <button id="switcher-small">Smaller</button>
+
+			</div>
+
+			<br>
+
+			 <div id="container">
+
+			<form action = "contactFolder/contactDetails.php" method = "post">
+
+			<div class="speech">
+			<fieldset>
+
+			<h3>Customer Information</h3>
+
+			<table>
+			<tr><td>
+			Name:
+			</td>
+			<td>
+			<input type="text" size="15" maxlength="15" name="name">
+			</td>
+			</tr>
+			</td>
+
+
+
+			</td>
+			<tr>
+			<td>
+			Password:
+			</td>
+			<td>
+
+			<input type="password" size="15.9" maxlength="17" name="password">
+			<%= password_field :password %>
+
+
+			</td></tr>
+			<tr>
+			<td>
+			<br />
+			</td>
+			</tr>
+			</table>
+
+
+			<label for ="form-textarea">Comments</label><br/>
+			<textarea rows="5" cols="25" wrap="physical" name="comments" id = "form-textarea">
+
+			</textarea>
+			<br/><br/>
+			<input type="submit" name = "button" value="Submit">
+			<input type = "reset" value = "Reset">
+
+
+
+			  <p>For more information please enter your detail.</p>
+
+
+			</div>
+
+
+
+				<a href="mailto:henryiv@king.co.uk.email">email</a>
+				<a href="Report.docx">Report</a>
+				<br>
+				<p>  </p>
+</form>
+	</div>
+
+
+			<div data-role="footer"
+				data-position="fixed"
+				data-theme="a"
+				data-id="vs_footer">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home"
+						data-role="button"
+						data-icon="home"
+						>Home</a></li>
+						<li><a href="#"
+						data-role="button"
+						data-icon="vs_blog"
+						>Blog</a></li>
+						<li><a href="#videos"
+						data-role="button"
+						data-icon="vs_video"
+						>Videos</a></li>
+						<li><a href="#photos"
+						data-role="button"
+						data-icon="vs_photo"
+						>Photos</a></li>
+						<li><a href="#about"
+						data-role="button"
+						data-icon="vs_blog"
+						>About</a></li>
+					</ul>
+				</div><!-- navbar -->
+			</div><!-- footer -->
+	</div><!-- page -->
+
+
+
+
+	<!-- Page: blog -->
+	<div id="blog"
+		data-theme="a"
+		data-role="page"
+		data-title="View Source: Blog">
+		<div data-role="header"
+			data-theme="a"
+			data-position="fixed"
+			data-id="vs_header">
+			<h1>Blog</h1>
+			<a href="#home"
+				data-icon="home"
+				data-iconpos="notext"
+				>Home</a>
+			<a href="#info"
+				data-icon="info"
+				data-iconpos="notext"
+				data-rel="dialog"
+				>Info</a>
+		</div><!-- header -->
+		<div data-theme="a"
+			data-role="content"
+			id="postlist">
+		</div>
+
+
+
+		<!-- content -->
+
+
+			<div id="blogOutput"></div>
+
+
+
+
+		<div data-role="footer"
+			data-position="fixed"
+			data-theme="a"
+			data-id="vs_footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home"
+					data-role="button"
+					data-icon="home"
+					>Home</a></li>
+					<li><a href="#"
+					data-role="button"
+					data-icon="vs_blog"
+					>Blog</a></li>
+					<li><a href="#videos"
+					data-role="button"
+					data-icon="vs_video"
+					>Videos</a></li>
+					<li><a href="#photos"
+					data-role="button"
+					data-icon="vs_photo"
+					>Photos</a></li>
+					<li><a href="#about"
+					data-role="button"
+					data-icon="vs_blog"
+					>About</a></li>
+				</ul>
+			</div><!-- navbar -->
+		</div><!-- footer -->
+	</div><!-- page -->
+
+
+
+
+	<!-- Page: Videos -->
+	<div id="videos"
+		data-role="page"
+		data-title="View Source: Videos">
+		<div data-role="header"
+			data-position="fixed"
+			data-id="vs_header">
+			<h1>Videos</h1>
+			<a href="#home"
+				data-icon="home"
+				data-iconpos="notext"
+				>Home</a>
+			<a href="#info"
+				data-icon="info"
+				data-iconpos="notext"
+				data-rel="dialog"
+				>Info</a>
+		</div><!-- header -->
+		<div data-role="content">
+
+	<div data-role="content">
+		<div class="ui-grid-a" id="videolist">
+		</div><!-- grid -->
+	</div><!-- content -->
+
+		</div><!-- content -->
+
+		<div data-role="footer"
+			data-position="fixed"
+			data-id="vs_footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home"
+					data-role="button"
+					data-icon="home"
+					>Home</a></li>
+					<li><a href="#blog"
+					data-role="button"
+					data-icon="vs_blog"
+					>Blog</a></li>
+					<li><a href="#"
+					data-role="button"
+					data-icon="vs_video"
+					>Videos</a></li>
+					<li><a href="#photos"
+					data-role="button"
+					data-icon="vs_photo"
+					>Photos</a></li>
+					<li><a href="#about"
+					data-role="button"
+					data-icon="vs_blog"
+					>About</a></li>
+				</ul>
+			</div><!-- navbar -->
+		</div><!-- footer -->
+	</div><!-- page -->
+
+	<div id="videoplayer"
+		data-role="page">
+		<div data-role="header"
+			data-position="fixed"
+			data-theme="a">
+			<a href="#videos"
+				data-transition="fade"
+				data-icon="back"
+				data-iconpos="notext"
+				data-direction="reverse"
+				>Videos</a>
+			<h1>Videos</h1>
+		</div><!-- header -->
+		<div data-role="content">
+			<div id="myplayer"></div>
+		</div><!-- content -->
+	</div><!-- page -->
+
+
+	<!-- Page: Photos -->
+	<div id="photos"
+		data-role="page"
+		data-title="View Source: Photos">
+		<div data-role="header"
+			data-position="fixed"
+			data-id="vs_header">
+			<h1>Photos</h1>
+			<a href="#home"
+				data-icon="home"
+				data-iconpos="notext"
+				>Home</a>
+			<a href="#info"
+				data-icon="info"
+				data-iconpos="notext"
+				data-rel="dialog"
+				>Info</a>
+		</div><!-- header -->
+
+		<div data-role-"content"
+			data-theme="a">
+			<div class="ui-grid-c" id="photolist">
+			</div><!-- grid -->
+		</div><!-- content -->
+
+
+		<div data-role="footer"
+			data-position="fixed"
+			data-id="vs_footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home"
+					data-role="button"
+					data-icon="home"
+					>Home</a></li>
+					<li><a href="#blog"
+					data-role="button"
+					data-icon="vs_blog"
+					>Blog</a></li>
+					<li><a href="#videos"
+					data-role="button"
+					data-icon="vs_video"
+					>Videos</a></li>
+					<li><a href="#"
+					data-role="button"
+					data-icon="vs_photo"
+					>Photos</a></li>
+					<li><a href="#about"
+					data-role="button"
+					data-icon="vs_blog"
+					>About</a></li>
+				</ul>
+			</div><!-- navbar -->
+		</div><!-- footer -->
+	</div><!-- page -->
+
+<div data-role="page"
+		id="showphoto">
+		<div data-role="header"
+			data-position="fixed"
+			data-theme="a">
+			<a href="#photos"
+				data-transition="fade"
+				data-icon="back"
+				data-iconpos="notext"
+				>Photos</a>
+			<h1>Photos</h1>
+		</div><!-- header -->
+		<div data-role="content">
+			<div id="myphoto"></div>
+		</div><!-- content -->
+	</div><!-- page -->
+
+
+<!-- Page: About us -->
+	<div id="about"
+		data-theme="a"
+		data-role="page"
+		data-title="View Source: Blog">
+		<div data-role="header"
+			data-theme="a"
+			data-position="fixed"
+			data-id="vs_header">
+			<h1>About us</h1>
+			<a href="#home"
+				data-icon="home"
+				data-iconpos="notext"
+				>Home</a>
+			<a href="#info"
+				data-icon="info"
+				data-iconpos="notext"
+				data-rel="dialog"
+				>Info</a>
+		</div><!-- header -->
+
+
+
+
+		<!-- content -->
+
+
+
+
+			<div style="text-align:center;">
+
+				<p>The Classic Car Centre has been exclusively restoring classic cars for twenty seven years. We started out in a small rented workshop in Rathmines and then spent some years in Dun Laoghaire.</p>
+				<p>We have a 5,500sq ft premises near Navan in Co. Meath, Ireland. We specialize in bodywork repair and restoration, whether a small scratch or a "nut and bolt" restoration of your prized classic.</p>
+				<p>Our workshop also offers a mechanical repair service from an oil change to a full mechanical rebuild. We also offer a full wax injection rustproofing service using DINITROL products</p>
+				<p>Visits to our premises are welcome by prior arrangement.</p>
+				<p>Opening hours are Monday - Friday 9am - 6pm. Saturdays by appointment only.</p>
+				<p>We can collect and deliver cars and we charge for written estimates,  but advice is free.</p>
+				<p>Our showroom features an exclusive selection of cars for sale. We also offer a brokerage service for clients cars.</p>
+				<p>If you have a particular make or model of car that you require, we will endeavour to source it for you.</p>
+			</div>
+
+
+
+
+			<div data-role="collapsible" data-theme="a" style="margin:5px 5px 5px 5px;">
+
+			<form data-ajax="false" onsubmit="getDirections();return false;" style="padding-left:10px;padding-right:10px;">
+				<input type="text" id="userStartPoint"/>
+				<input type="submit" value="Find directions"/>
+			</form>
+
+				<h3>Map Display</h3>
+				<div id="map_canvas" style="margin:auto auto;width:80%; height:400px;">
+				</div>
+
+
+				</br>
+				<div style="text-align:center;">
+				<h3>Turn by Turn Directions Display</h3>
+				</div>
+
+				<div id="directionsPanel" style="width:100%; height:400px; margin: auto auto; overflow: auto;"></div>
+			</div>
+
+
+
+		<!--end About-->
+
+
+
+
+
+		<div data-role="footer"
+			data-position="fixed"
+			data-theme="a"
+			data-id="vs_footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home"
+					data-role="button"
+					data-icon="home"
+					>Home</a></li>
+					<li><a href="#"
+					data-role="button"
+					data-icon="vs_blog"
+					>Blog</a></li>
+					<li><a href="#videos"
+					data-role="button"
+					data-icon="vs_video"
+					>Videos</a></li>
+					<li><a href="#photos"
+					data-role="button"
+					data-icon="vs_photo"
+					>Photos</a></li>
+					<li><a href="#about"
+					data-role="button"
+					data-icon="vs_blog"
+					>About</a></li>
+				</ul>
+			</div><!-- navbar -->
+		</div><!-- footer -->
+	</div><!-- page -->
+
+</div>
+
+
+
+	<div data-role="page"
+		id="info"
+		data-theme="a"
+		>
+		<div data-role="header">
+			<h1>About View Source</h1>
+		</div>
+		<div data-role="content">
+			<p>View Source offers short projects on intermediate to advanced web design topics, covering technologies such as HTML, PHP, jQuery, and CSS, as well as content management solutions like WordPress and integration with Twitter, YouTube, and more.</p>
+			<a href="#"
+				data-role="button"
+				data-inline="true"
+				data-rel="back"
+				data-theme="a"
+			>cancel</a>
+			<a href="#home"
+				data-role="button"
+				data-inline="true"
+				data-theme="a"
+			>home</a>
+		</div>
+	</div>
+	</div>
+
+<script src="_/js/blog.js"></script>
+
+<script src="http://gdata.youtube.com/feeds/videos?alt=json-in-script&q=ClassicCarsRestore&callback=listVideos" type="text/javascript"></script>
+
+<script src="http://api.flickr.com/services/feeds/photos_public.gne?id=90790561@N04&format=json&tags=classic" type="text/javascript"></script>
+
+<script src="_/js/googleMaps.js"></script>
+
+</body>
+
+
+</html>
