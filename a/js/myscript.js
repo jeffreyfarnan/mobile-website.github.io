@@ -13,7 +13,7 @@ function listPosts(data) {
 		
 		output += (val.thumbnail) ?
 			'<img src="' + val.thumbnail + '" alt="' + val.title + '" />':
-			'<img src="images/viewsourcelogo.png" alt="View Source Logo" />';
+			'<img src="../../images/viewsourcelogo.png" alt="View Source Logo" />';
 		output += '<p>' + excerpt + '</p>';
 		output += '</a>';
 		output += '</li>';
