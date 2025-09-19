@@ -9,8 +9,4 @@
 You can visit my site here: [Mobile Website](https://jeffreyfarnan.github.io/mobile-website.github.io/)
 
 
-**#Android Application**
-
-**Language:** Java
-
-**Description:** This Android APK is my Classic Cars Website which can be downloaded to an Android device and viewed offline. It was created with Android Studio and contains all the functionality of the online site.
+**Included:** This Mobile Cars Website can be downloaded to an Android device and viewed offline. It was created with Android Studio and contains all the functionality of the online site.
